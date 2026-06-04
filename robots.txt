@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://keywordscollections-bot.github.io/weifaith.github.io/sitemap.xml
