@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跨境GEO · 你的跨境AI搜索增长合伙人</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#1a1a2e;background:#f8f9fc;line-height:1.6}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,12,41,0.95);backdrop-filter:blur(8px);padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav .container{display:flex;align-items:center;justify-content:space-between}
+.nav .logo{color:white;font-weight:700;font-size:1.1em;letter-spacing:-0.3px}
+.nav .logo span{color:#f39c12}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88em;transition:color 0.2s}
+.nav-links a:hover{color:white}
+
+/* header */
+.header{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);color:white;padding:120px 0 80px;text-align:center}
+.header h1{font-size:3em;font-weight:700;margin-bottom:16px;letter-spacing:-0.5px}
+.header .sub{font-size:1.25em;opacity:0.85;max-width:650px;margin:0 auto;line-height:1.7}
+.header .tagline{font-size:0.95em;opacity:0.6;margin-top:20px}
+.cta-btn{display:inline-block;margin-top:30px;padding:14px 44px;background:#f39c12;color:white;border-radius:8px;text-decoration:none;font-weight:600;font-size:1.05em;transition:all 0.2s}
+.cta-btn:hover{background:#e67e22;transform:translateY(-2px);box-shadow:0 6px 20px rgba(243,156,18,0.3)}
+
+/* layout */
+.container{max-width:1040px;margin:0 auto;padding:0 24px}
+section{padding:70px 0}
+.section-title{font-size:1.8em;font-weight:700;margin-bottom:16px;text-align:center}
+.section-sub{text-align:center;color:#888;font-size:1em;margin-bottom:44px;max-width:600px;margin-left:auto;margin-right:auto}
+.section-title span{display:inline-block;padding-bottom:8px;border-bottom:3px solid #f39c12}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:white;border-radius:12px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:all 0.2s}
+.card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.1);transform:translateY(-4px)}
+.card h3{font-size:1.15em;margin-bottom:10px;color:#302b63}
+.card p{font-size:0.93em;color:#555;line-height:1.7}
+
+/* products */
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:20px}
+.product-card{background:white;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);border-top:4px solid #302b63;transition:all 0.2s}
+.product-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.1);transform:translateY(-4px)}
+.product-card.featured{border-top-color:#f39c12}
+.product-card .tag{font-size:0.78em;color:#999;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.product-card h3{font-size:1.1em;margin-bottom:6px}
+.product-card .price{font-size:1.5em;font-weight:700;color:#302b63;margin:6px 0 2px}
+.product-card .price-desc{font-size:0.82em;color:#999;margin-bottom:14px}
+.product-card ul{list-style:none;padding:0}
+.product-card ul li{padding:5px 0 5px 20px;position:relative;font-size:0.88em;color:#555}
+.product-card ul li:before{content:"✓";position:absolute;left:0;color:#27ae60;font-weight:700}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:step}
+.step{background:white;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);position:relative;padding-top:60px}
+.step:before{counter-increment:step;content:counter(step);position:absolute;top:20px;left:28px;width:32px;height:32px;background:#302b63;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85em}
+.step h3{font-size:1.05em;margin-bottom:8px}
+.step p{font-size:0.88em;color:#666;line-height:1.6}
+
+/* value grid */
+.value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.value-item{text-align:center;padding:24px;background:white;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.value-item .icon{font-size:2.2em;margin-bottom:8px}
+.value-item h3{font-size:1em;margin-bottom:6px;color:#302b63}
+.value-item p{font-size:0.85em;color:#666;line-height:1.6}
+
+/* about */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.about-left h2{font-size:1.6em;margin-bottom:6px}
+.about-left .sub{color:#888;margin-bottom:20px}
+.about-left p{color:#555;font-size:0.95em;line-height:1.8;margin-bottom:14px}
+.about-right{background:#f8f9fc;border-radius:12px;padding:32px}
+.about-right h3{font-size:1.05em;margin-bottom:16px;color:#302b63}
+.about-right .exp-item{padding:12px 0;border-bottom:1px solid #eee}
+.about-right .exp-item:last-child{border-bottom:none}
+.about-right .exp-item .year{font-size:0.82em;color:#f39c12;font-weight:600}
+.about-right .exp-item .title{font-size:0.95em;font-weight:600;margin:2px 0}
+.about-right .exp-item .desc{font-size:0.85em;color:#666}
+
+/* placeholder highlight */
+.ph{display:inline-block;background:#fff3e0;color:#e67e22;padding:0 6px;border-radius:4px;font-weight:600;font-size:0.85em}
+.ph-note{background:#fef9e7;border:1px dashed #f39c12;border-radius:8px;padding:14px 18px;margin-bottom:16px;font-size:0.85em;color:#7f6000}
+.ph-note strong{color:#e67e22}
+.ph-field{background:#fef9e7;border:1px dashed #f39c12;border-radius:4px;padding:2px 8px;color:#e67e22;font-weight:600}
+
+/* contact */
+.contact-card{background:white;border-radius:12px;padding:40px;box-shadow:0 2px 12px rgba(0,0,0,0.06);max-width:600px;margin:0 auto;text-align:center}
+.contact-card h3{font-size:1.3em;margin-bottom:8px;color:#302b63}
+.contact-card p{color:#555;font-size:0.93em;line-height:1.7}
+.contact-card .contact-detail{margin-top:20px;padding-top:20px;border-top:1px solid #eee}
+.contact-card .contact-detail p{padding:4px 0}
+
+/* footer */
+.footer{background:#1a1a2e;color:white;text-align:center;padding:40px 0;font-size:0.88em;opacity:0.8}
+.footer p{margin:4px 0}
+
+@media(max-width:768px){
+  .header h1{font-size:2em}
+  .header .sub{font-size:1em}
+  .section-title{font-size:1.4em}
+  .nav-links{display:none}
+  .about-wrap{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<!-- Nav -->
+<nav class="nav">
+<div class="container">
+<div class="logo">跨境<span>GEO</span></div>
+<ul class="nav-links">
+<li><a href="#about">关于</a></li>
+<li><a href="#services">服务</a></li>
+<li><a href="#how">流程</a></li>
+<li><a href="#why">优势</a></li>
+<li><a href="#clients">案例</a></li>
+<li><a href="#contact">联系</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- Header -->
+<div class="header">
+<div class="container">
+<h1>跨境GEO</h1>
+<p class="sub">帮跨境电商卖家在AI搜索时代获得免费自然流量<br>你的品牌成为ChatGPT/Perplexity/Gemini的优先推荐</p>
+<p class="tagline">跨境背景 × GEO专业 × AI驱动 — 三重稀缺能力，一个服务商</p>
+<a href="#contact" class="cta-btn">免费获取GEO现状简报 →</a>
+</div>
+</div>
+
+<!-- ============================================ -->
+<!-- 关于我们 — 等你填真实信息 -->
+<!-- ============================================ -->
+<div class="container" id="about">
+<section>
+
+<div class="ph-note">
+<strong>📝 需要你填的信息（标记为橙色高亮的部分）：</strong>
+你的名字、跨境电商的具体经历、时间节点、具体业绩。下面的示例内容是我写的"模板"，你替换成真实信息即可。
+</div>
+
+<h2 class="section-title"><span>关于我们</span></h2>
+<p class="section-sub">从跨境电商一线到AI搜索优化专家——我们走过的路，就是你需要的经验</p>
+
+<div class="about-wrap">
+<div class="about-left">
+<h2>不只是懂GEO，更懂你的生意</h2>
+<p class="sub">我们不是理论派，是从跨境实战中走出来的</p>
+
+<p>我是 <span class="ph-field">[你的名字]</span>，<span class="ph-field">[做了X年]</span> 跨境电商老兵。</p>
+
+<p><strong>我的跨境经历：</strong>
+从 <span class="ph-field">[201X年]</span> 开始做跨境电商，先后经历过 <span class="ph-field">[亚马逊/独立站/Shopify/eBay等平台]</span>，运营过 <span class="ph-field">[什么品类，如：3C电子/家居/宠物/服装等]</span>。
+这段经历让我深刻理解跨境卖家的每一个痛点——<span class="ph-field">[选品难/流量贵/转化低/库存压力等，写你最深的体会]</span>。
+</p>
+
+<p><strong>我怎么做起GEO的：</strong>
+<span class="ph-field">[202X年]</span> 我开始关注AI搜索趋势，发现ChatGPT/Perplexity正在改变用户获取信息的方式，传统SEO的逻辑在AI搜索时代正在失效。
+我用 <span class="ph-field">[具体AI工具，如Claude/ChatGPT/本地大模型等]</span> 搭建了自己的内容生产工作流，跑通了从选题→创作→Schema优化→多引擎提交→数据跟踪的完整闭环。
+</p>
+
+<p><strong>现在能为你做什么：</strong>
+我已经为 <span class="ph-field">[X个/多个/部分]</span> 跨境品牌提供了GEO优化服务，覆盖 <span class="ph-field">[你的真实服务品类]</span> 等品类。我积累了一套 <span class="ph-field">[自研AI提示词体系/方法论文档/检查清单]</span>，能够快速帮你的品牌在AI搜索中建立可见度。
+</p>
+</div>
+
+<div class="about-right">
+<h3>📌 核心经历</h3>
+
+<div class="exp-item">
+<div class="year"><span class="ph-field">[201X]</span> — <span class="ph-field">[至今/202X]</span></div>
+<div class="title"><span class="ph-field">[你的真实经历标题，如：亚��逊C位卖家/独立站运营]</span></div>
+<div class="desc"><span class="ph-field">[具体做了什么，取得什么结果]</span></div>
+</div>
+
+<div class="exp-item">
+<div class="year"><span class="ph-field">[202X]</span> — <span class="ph-field">[至今/202X]</span></div>
+<div class="title"><span class="ph-field">[GEO/AI相关经历]</span></div>
+<div class="desc"><span class="ph-field">[具体做了什么，学了什么，搭建了什么]</span></div>
+</div>
+
+<div class="exp-item">
+<div class="year"><span class="ph-field">[202X]</span> — <span class="ph-field">[至今/202X]</span></div>
+<div class="title"><span class="ph-field">[AI生产力相关经历]</span></div>
+<div class="desc"><span class="ph-field">[如：用AI工作流将内容产出效率提升X倍]</span></div>
+</div>
+
+<div class="exp-item">
+<div class="year">2026 — 至今</div>
+<div class="title">GEO服务商</div>
+<div class="desc">正式对外提供GEO诊断+内容包+全托管服务<span class="ph-field">[如果有真实客户可以写"服务了X个品牌"，如果没有写"现正开放首批客户"]</span></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- GEO 科普 -->
+<div class="container">
+<section>
+<h2 class="section-title"><span>GEO是什么？为什么你现在就要做</span></h2>
+<p class="section-sub">AI搜索正在改写流量规则，看懂GEO=看懂下一个5年的获客方式</p>
+<div class="value-grid">
+<div class="value-item">
+<div class="icon">🔍</div>
+<h3>传统SEO已见顶</h3>
+<p>AI搜索(ChatGPT/Perplexity/Gemini)正在取代传统搜索引擎的流量入口，用户不再翻页找结果</p>
+</div>
+<div class="value-item">
+<div class="icon">📈</div>
+<h3>GEO是新的流量红利</h3>
+<p>2025-2026年是GEO的黄金窗口期，知道的人在快速抢占先机，不知道的人将被甩开</p>
+</div>
+<div class="value-item">
+<div class="icon">🎯</div>
+<h3>AI引用=免费精准流量</h3>
+<p>你的产品或内容被AI引用一次，就持续获得免费的精准用户触达，不用再烧广告费</p>
+</div>
+<div class="value-item">
+<div class="icon">⚡</div>
+<h3>比传统SEO快3-6个月</h3>
+<p>GEO的核心是内容结构化+AI友好，3个月即可看到引用数据变化，见效速度远超传统SEO</p>
+</div>
+</div>
+</section>
+</div>
+
+<!-- Services -->
+<section style="background:white" id="services">
+<div class="container">
+<h2 class="section-title"><span>服务产品</span></h2>
+<p class="section-sub">按需选择，从快速诊断到全托管，覆盖不同阶段和预算</p>
+<div class="products">
+<div class="product-card">
+<div class="tag">引流款</div>
+<h3>GEO诊断报告</h3>
+<div class="price">¥2,000 <span style="font-size:0.5em;font-weight:400;color:#999">起</span></div>
+<div class="price-desc">一次性项目 · 1周交付</div>
+<ul>
+<li>品牌AI引用现状扫描</li>
+<li>竞品GEO对比分析</li>
+<li>改进建议+执行路线图</li>
+<li>20-30页专业报告</li>
+</ul>
+</div>
+<div class="product-card featured">
+<div class="tag">核心利润款</div>
+<h3>GEO月度内容包</h3>
+<div class="price">¥3,000 <span style="font-size:0.5em;font-weight:400;color:#999">起/月</span></div>
+<div class="price-desc">基础版至企业版 · 多语种</div>
+<ul>
+<li>GEO优化内容创作(15-100+/月)</li>
+<li>结构化数据标记(Schema)</li>
+<li>多引擎提交+收录跟踪</li>
+<li>月度数据报告+优化建议</li>
+</ul>
+</div>
+<div class="product-card">
+<div class="tag">高客单价</div>
+<h3>GEO全托管</h3>
+<div class="price">¥30,000 <span style="font-size:0.5em;font-weight:400;color:#999">起/月</span></div>
+<div class="price-desc">年框30-100万 · 适合中大型卖家</div>
+<ul>
+<li>内容策略+创作+发布全包</li>
+<li>持续优化+数据跟踪</li>
+<li>多语言多市场覆盖</li>
+<li>专属客户成功经理</li>
+</ul>
+</div>
+<div class="product-card">
+<div class="tag">影响力</div>
+<h3>GEO培训/咨询</h3>
+<div class="price">¥999 <span style="font-size:0.5em;font-weight:400;color:#999">起</span></div>
+<div class="price-desc">线上课/训练营/企业内训</div>
+<ul>
+<li>线上录播课 999元起</li>
+<li>线上训练营 3,999-9,999元</li>
+<li>企业内训 2-5万/次</li>
+<li>一对一咨询 3,000-8,000元/小时</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Why us -->
+<div class="container" id="why">
+<section>
+<h2 class="section-title"><span>为什么选我们</span></h2>
+<p class="section-sub">不是最便宜的，但可能��最懂你生意的那一个</p>
+<div class="cards">
+<div class="card">
+<h3>🌐 跨境电商DNA</h3>
+<p>我们走过你正在走的路——从选品上架到流量焦虑，从烧PPC到ROI算不过来。所以我们给你的方案，不是教科书上的，是实战打磨过的。</p>
+</div>
+<div class="card">
+<h3>🤖 AI工作流碾压</h3>
+<p>我们自建的AI内容生产系统，单日产出可达传统团队的5-10倍。别人一周做1篇，我们一天做5篇。不是堆量，是每篇都按照GEO标准结构化优化。</p>
+</div>
+<div class="card">
+<h3>🎯 三重交叉稀缺能力</h3>
+<p>懂跨境 × 懂GEO × 懂AI——这三个圈的交集，在国内几乎没人同时具备。这就是你的竞争壁垒，也是我们敢说"这个事只有我们能做好"的底气。</p>
+</div>
+<div class="card">
+<h3>📊 数据驱动，效果可见</h3>
+<p>我们不画饼。每一篇内容的AI引用量、每一次流量的波动、每个关键词的排名变化——全部数据化呈现。你做决策，只需看数据。</p>
+</div>
+</div>
+</section>
+</div>
+
+<!-- Process -->
+<section style="background:white" id="how">
+<div class="container">
+<h2 class="section-title"><span>合作流程</span></h2>
+<p class="section-sub">从免费诊断到持续优化，每一步你都看得见</p>
+<div class="steps">
+<div class="step">
+<h3>免费诊断</h3>
+<p>你提供品牌/站点名称，我扫描当前AI引用情况，出具免费GEO现状简报。0风险，先看值不值得做。</p>
+</div>
+<div class="step">
+<h3>方案定制</h3>
+<p>根据诊断结果和你的预算，定制内容策略+服务方案。不推最贵的，只推最适合你当前阶段的。</p>
+</div>
+<div class="step">
+<h3>执行交付</h3>
+<p>AI工作流批量产出GEO优化内容，结构化标记+多引擎提交。你只需要确认方向，执行交给我们。</p>
+</div>
+<div class="step">
+<h3>数据复盘</h3>
+<p>每月一次完整数据报告：引用量变化、流量趋势、收录情况、下月策略建议。持续优化，持续增长。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Target clients -->
+<div class="container">
+<section>
+<h2 class="section-title"><span>适合这样的你</span></h2>
+<p class="section-sub">不管你现在多大体量，GEO都应该是你下一阶段的增长引擎</p>
+<div class="cards">
+<div class="card">
+<h3>🛒 跨境中小卖家</h3>
+<p>年销500万以下，亚马逊/独立站流量越来越贵，想找新的免费流量入口。你需要的是——低成本验证GEO是否有效。</p>
+</div>
+<div class="card">
+<h3>🏢 中型卖家/品牌</h3>
+<p>年销500-3000万，已有稳定团队，想开辟AI搜索流量增量。你需要的是——体系化GEO方案，跟现有流量渠道互补。</p>
+</div>
+<div class="card">
+<h3>🏆 头部品牌</h3>
+<p>年销3000万以上，已布局SEO，需要GEO增量补位。你需要的是——定制化全托管，多语言多市场覆盖。</p>
+</div>
+<div class="card">
+<h3>🤝 跨境代运营公司</h3>
+<p>想给客户增加GEO服务线，提升客单价和竞争力。你需要的是——白标合作，我们做交付，你拿客户。</p>
+</div>
+</div>
+</section>
+</div>
+
+<!-- ============================================ -->
+<!-- 案例 — 等你填真实信息或保持模板 -->
+<!-- ============================================ -->
+<section style="background:white" id="clients">
+<div class="container">
+
+<div class="ph-note">
+<strong>📝 案例区目前是示例模板。</strong>
+如果你有真实客户案例，替换下面的内容；如果没有，这版保持"模版占位"状态，不会对客户展示虚构数据。
+</div>
+
+<h2 class="section-title"><span>服务案例</span></h2>
+<p class="section-sub">以下是我服务过的部分品牌 <span class="ph-field">[如果你还没有真实案例，可以改成"期待你的品牌成为第一个案例"]</span></p>
+
+<div class="cards">
+<div class="card">
+<h3><span class="ph-field">[品类，如：消费电子]</span></h3>
+<p><strong>客户类型：</strong><span class="ph-field">[中小卖家/品牌/工厂]</span></p>
+<p><strong>服务内容：</strong><span class="ph-field">[诊断/月度内容包/全托管]</span></p>
+<p><strong>效果：</strong><span class="ph-field">[如果有真实数据就写，没有就写"正在服务中"]</span></p>
+</div>
+
+<div class="card">
+<h3><span class="ph-field">[品类]</span></h3>
+<p><strong>客户类型：</strong><span class="ph-field">[类型]</span></p>
+<p><strong>服务内容：</strong><span class="ph-field">[服务类型]</span></p>
+<p><strong>效果：</strong><span class="ph-field">[效果数据]</span></p>
+</div>
+
+<div class="card">
+<h3><span class="ph-field">[品类]</span></h3>
+<p><strong>客户类型：</strong><span class="ph-field">[类型]</span></p>
+<p><strong>服务内容：</strong><span class="ph-field">[服务类型]</span></p>
+<p><strong>效果：</strong><span class="ph-field">[效果数据]</span></p>
+</div>
+
+<div class="card">
+<h3><span class="ph-field">[品类]</span></h3>
+<p><strong>客户类型：</strong><span class="ph-field">[类型]</span></p>
+<p><strong>服务内容：</strong><span class="ph-field">[服务类型]</span></p>
+<p><strong>效果：</strong><span class="ph-field">[效果数据]</span></p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- 联系 — 等你填真实联系方式 -->
+<!-- ============================================ -->
+<div class="container" id="contact">
+<section>
+
+<div class="ph-note">
+<strong>📝 联系方式待填：</strong>替换下面的占位符为你的真实信息。
+</div>
+
+<h2 class="section-title"><span>立即开始</span></h2>
+<p class="section-sub">先了解你目前的AI引用情况，再决定要不要做</p>
+<div class="contact-card">
+<h3>免费获取你的品牌GEO现状简报</h3>
+<p>告诉我你的品牌或站点名称，我出一份简短的AI引用分析给你看。<br>不需要任何费用，也不捆绑任何服务。</p>
+<div class="contact-detail">
+<p><strong>📧 邮箱：</strong> <span class="ph-field">你的邮箱@example.com</span></p>
+<p><strong>📱 微信：</strong> <span class="ph-field">你的微信号</span></p>
+<p><strong>💬 公众号：</strong> <span class="ph-field">你的公众号名称</span></p>
+<p style="margin-top:12px;color:#f39c12;font-weight:600">🎁 前10位咨询客户享首月5折优惠</p>
+</div>
+</div>
+</section>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+<div class="container">
+<p>跨境GEO · 你的跨境AI搜索增长合伙人</p>
+<p style="margin-top:6px;font-size:0.85em">跨境背景 · GEO专业 · AI驱动</p>
+<p style="margin-top:4px;font-size:0.8em">© 2026 跨境GEO. All rights reserved.</p>
+</div>
+</div>
+
+</body>
+</html>
+
+
