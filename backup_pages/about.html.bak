@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我们 — 陈英文 · 关键词电子商务（深圳）有限公司 | 关键词·跨境GEO</title>
+  <meta name="description" content="陈英文，香港理工硕士，前Amazon/Google营销策略，2022年创立关键词电子商务。自研GEO体系，累计服务GMV $2500W+，覆盖ChatGPT Search、Perplexity、Google AI Overviews等AI搜索引擎。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://keywordscollections-bot.github.io/weifaith.github.io/about.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="关于我们 — 陈英文 · 关键词电子商务（深圳）有限公司">
+  <meta property="og:description" content="前Amazon/Google营销策略，香港理工硕士，自研GEO体系，累计服务GMV $2500W+">
+  <meta property="og:url" content="https://keywordscollections-bot.github.io/weifaith.github.io/about.html">
+  <meta property="og:site_name" content="关键词·跨境GEO">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "陈英文",
+    "givenName": "英文",
+    "familyName": "陈",
+    "jobTitle": "Founder & CEO",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "关键词电子商务（深圳）有限公司",
+      "alternateName": "KEYWORDS"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "香港理工大学"
+    },
+    "knowsAbout": ["GEO生成式引擎优化","跨境电商","AI搜索优化","数字营销"]
+  }
+  </script>
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; background: #f8f9fa; color: #333; line-height: 1.8; }
+    .container { max-width: 880px; margin: 0 auto; padding: 20px; }
+    
+    .top-bar { background: linear-gradient(135deg, #0f0c29, #302b63); color: #fff; padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+    .top-bar a { color: #aaa; text-decoration: none; font-size: 0.9em; }
+    .top-bar a:hover { color: #fff; }
+    .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+    
+    .page-header { text-align: center; padding: 40px 0 30px; }
+    .page-header h1 { font-size: 2em; color: #302b63; margin-bottom: 6px; }
+    .page-header .sub { color: #888; font-size: 1em; }
+    
+    .section { background: #fff; border-radius: 12px; padding: 30px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .section h2 { font-size: 1.3em; color: #302b63; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #f0eefe; }
+    .section p { margin-bottom: 12px; color: #444; }
+    .section p:last-child { margin-bottom: 0; }
+    
+    .highlight-box { background: #f8f6ff; border-left: 4px solid #302b63; border-radius: 8px; padding: 20px; margin: 16px 0; }
+    .highlight-box p { margin-bottom: 6px; }
+    
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+    .stat-card { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 16px; text-align: center; }
+    .stat-card .num { font-size: 1.5em; font-weight: 700; color: #302b63; }
+    .stat-card .label { font-size: 0.85em; color: #888; margin-top: 4px; }
+    
+    .timeline { margin: 16px 0; }
+    .timeline-item { display: flex; gap: 16px; margin-bottom: 20px; }
+    .timeline-year { min-width: 80px; font-weight: 700; color: #302b63; font-size: 1em; }
+    .timeline-desc { color: #444; }
+    .timeline-desc strong { color: #333; }
+    
+    .cta-section { text-align: center; padding: 20px 0; }
+    .cta-section a { display: inline-block; padding: 10px 28px; background: #302b63; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 500; }
+    .cta-section a:hover { background: #1a1640; }
+    
+    .footer { text-align: center; padding: 30px 0; color: #888; font-size: 0.83em; border-top: 1px solid #eee; margin-top: 20px; }
+    .footer a { color: #302b63; text-decoration: none; }
+    
+    @media (max-width: 600px) {
+      .page-header h1 { font-size: 1.5em; }
+      .section { padding: 20px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .timeline-item { flex-direction: column; gap: 4px; }
+    }
+  </style>
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="关于陈英文 — 关键词·跨境GEO创始人">
+  <meta property="og:description" content="陈英文，香港理工硕士，前Amazon/Google营销策略，2022年创立关键词电子商务。自研GEO体系，累计服务GMV \+。">
+  <meta property="og:url" content="https://keywordscollections-bot.github.io/weifaith.github.io/about.html">
+  <meta property="og:site_name" content="关键词·跨境GEO">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="关于陈英文 — 关键词·跨境GEO创始人">
+  <meta name="twitter:description" content="陈英文，香港理工硕士，前Amazon/Google营销策略，2022年创立关键词电子商务。自研GEO体系，累计服务GMV \+。">
+<script src="/js/analytics-config.js"></script>
+<script src="/js/analytics-loader.js"></script>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <a href="index.html">&larr; 返回首页</a>
+    <span style="font-size:0.85em;color:#aaa">关键词&middot;跨境GEO</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="page-header">
+  <h1>关于我们</h1>
+  <p class="sub">陈英文 &middot; 关键词电子商务（深圳）有限公司 &middot; 品牌 KEYWORDS</p>
+</div>
+
+<div class="section">
+  <h2>创始人</h2>
+  
+  <div class="highlight-box">
+    <p><strong>陈英文</strong> <span style="color:#888">CHEN YINGWEN</span> &middot; Founder & CEO</p>
+    <p style="font-size:0.9em;color:#666">香港理工大学市场营销硕士</p>
+  </div>
+  
+  <p>曾任职于 <strong>Amazon</strong> 及 <strong>Google</strong> 大中华区营销策略团队，负责跨境品牌广告体系搭建与AI驱动的增长策略。后以合伙人身份加入某跨境明星企业，主导品牌从0到亿级规模的完整增长周期。</p>
+  
+  <p>2022年创立<strong>关键词电子商务（深圳）有限公司</strong>，旗下品牌 <strong>KEYWORDS</strong>，定位「跨境GEO品牌加速器」——在消费者从搜索转向AI提问的时代，率先将生成式引擎优化（GEO）引入跨境品牌建设体系。</p>
+  
+  <p>陈英文是国内最早一批将<strong>GEO（生成式引擎优化）</strong>应用于跨境电商领域的实践者，自研GEO框架覆盖ChatGPT Search、Perplexity、Google AI Overviews、Gemini等主流AI搜索平台。</p>
+</div>
+
+<div class="section">
+  <h2>核心数据</h2>
+  
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="num">$2500W+</div>
+      <div class="label">累计服务GMV</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">40+</div>
+      <div class="label">高意图关键词AI搜索首页展示</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">50K+</div>
+      <div class="label">KOL资源网覆盖美欧东南亚</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">18人</div>
+      <div class="label">分布式团队（深圳/广州/马尼拉）</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>发展历程</h2>
+  
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-year">2018-2021</div>
+      <div class="timeline-desc">
+        <strong>Amazon & Google 大中华区</strong> &mdash; 负责跨境品牌广告策略与AI驱动增长，积累对跨境电商全链路的深度理解
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2021-2022</div>
+      <div class="timeline-desc">
+        <strong>跨境明星企业合伙人</strong> &mdash; 主导品牌从0到亿级规模增长，操盘全渠道流量体系
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2022</div>
+      <div class="timeline-desc">
+        <strong>创立关键词电子商务</strong> &mdash; 成立关键词电子商务（深圳）有限公司，品牌KEYWORDS，聚焦跨境品牌数字化增长
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2024-2025</div>
+      <div class="timeline-desc">
+        <strong>率先布局GEO</strong> &mdash; 观察到AI搜索的崛起趋势，投入自研GEO体系，成为国内最早一批将GEO应用于跨境领域的服务商
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2025-2026</div>
+      <div class="timeline-desc">
+        <strong>GEO体系成熟</strong> &mdash; 覆盖ChatGPT Search、Perplexity、Google AI Overviews、Gemini四大平台，帮助多个品牌实现AI搜索首页展示，累计服务GMV突破$2500W
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>我们的愿景</h2>
+  <p>在消费者从「打开Google搜索关键词」转向「直接向AI提问」的时代，品牌在AI答案中的存在感，将决定下一个十年的流量格局。</p>
+  <p><strong>关键词·跨境GEO</strong> 的使命，就是帮助跨境品牌在这轮变革中抢占先机——让每一个优质产品，都能在AI搜索中被看见、被推荐、被选择。</p>
+</div>
+
+<div class="cta-section">
+  <p style="margin-bottom:12px;color:#555">想了解你的品牌在AI搜索中被如何呈现？</p>
+  <a href="index.html#contact">免费获取GEO现状简报 &rarr;</a>
+</div>
+
+</div>
+
+<div class="footer">
+  <p>&copy; 2026 关键词电子商务（深圳）有限公司 &middot; <a href="index.html">关键词&middot;跨境GEO</a> &middot; <a href="glossary.html">GEO术语百科</a> &middot; <a href="blog/geo-intro.html">GEO入门指南</a></p>
+</div>
+
+</body>
+</html>
+
+

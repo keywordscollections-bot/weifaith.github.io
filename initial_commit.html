@@ -1,0 +1,755 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关键词•跨境GEO</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#1a1a2e;background:#f8f9fc;line-height:1.6}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,12,41,0.95);backdrop-filter:blur(8px);padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav .container{display:flex;align-items:center;justify-content:space-between}
+.nav .logo{color:white;font-weight:700;font-size:1.1em;letter-spacing:-0.3px}
+.nav .logo span{color:#f39c12}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.88em;transition:color 0.2s}
+.nav-links a:hover{color:white}
+
+/* header */
+.header{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);color:white;padding:120px 0 80px;text-align:center}
+.header h1{font-size:3em;font-weight:700;margin-bottom:16px;letter-spacing:-0.5px}
+.header .sub{font-size:1.25em;opacity:0.85;max-width:650px;margin:0 auto;line-height:1.7}
+.header .tagline{font-size:0.95em;opacity:0.6;margin-top:20px}
+.cta-btn{display:inline-block;margin-top:30px;padding:14px 44px;background:#f39c12;color:white;border-radius:8px;text-decoration:none;font-weight:600;font-size:1.05em;transition:all 0.2s}
+.cta-btn:hover{background:#e67e22;transform:translateY(-2px);box-shadow:0 6px 20px rgba(243,156,18,0.3)}
+
+/* layout */
+.container{max-width:1040px;margin:0 auto;padding:0 24px}
+section{padding:70px 0}
+.section-title{font-size:1.8em;font-weight:700;margin-bottom:16px;text-align:center}
+.section-sub{text-align:center;color:#888;font-size:1em;margin-bottom:44px;max-width:600px;margin-left:auto;margin-right:auto}
+.section-title span{display:inline-block;padding-bottom:8px;border-bottom:3px solid #f39c12}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:stretch}
+.card{background:white;border-radius:12px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:all 0.2s;display:flex;flex-direction:column;height:100%}
+.card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.1);transform:translateY(-4px)}
+.card h3{font-size:1.15em;margin-bottom:10px;color:#302b63}
+.card .card-body{flex:1}
+.card .card-footer{margin-top:auto;padding-top:12px}
+.card p{font-size:0.93em;color:#555;line-height:1.7}
+
+/* products */
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:0 auto}
+.product-card{background:white;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);border-top:4px solid #302b63;transition:all 0.2s}
+.product-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.1);transform:translateY(-4px)}
+.product-card.featured{border-top-color:#f39c12}
+.product-card .tag{font-size:0.78em;color:#999;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.product-card h3{font-size:1.1em;margin-bottom:6px}
+.product-card .price{font-size:1.5em;font-weight:700;color:#302b63;margin:6px 0 2px}
+.product-card .price-desc{font-size:0.82em;color:#999;margin-bottom:14px}
+.product-card ul{list-style:none;padding:0}
+.product-card ul li{padding:5px 0 5px 20px;position:relative;font-size:0.88em;color:#555}
+.product-card ul li:before{content:"✓";position:absolute;left:0;color:#27ae60;font-weight:700}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:step}
+.step{background:white;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);position:relative;padding-top:60px}
+.step:before{counter-increment:step;content:counter(step);position:absolute;top:20px;left:28px;width:32px;height:32px;background:#302b63;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85em}
+.step h3{font-size:1.05em;margin-bottom:8px}
+.step p{font-size:0.88em;color:#666;line-height:1.6}
+
+/* value grid */
+.value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px}
+.value-item{text-align:center;padding:16px;background:white;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.value-item .icon{font-size:1.8em;margin-bottom:8px}
+.value-item h3{font-size:0.88em;margin-bottom:6px;color:#302b63}
+.value-item p{font-size:0.78em;color:#666;line-height:1.6}
+
+/* about */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.about-left h2{font-size:1.6em;margin-bottom:6px}
+.about-left .sub{color:#888;margin-bottom:20px}
+.about-left p{color:#555;font-size:0.95em;line-height:1.8;margin-bottom:14px}
+.about-right{background:#f8f9fc;border-radius:12px;padding:32px}
+.about-right h3{font-size:1.05em;margin-bottom:16px;color:#302b63}
+.about-right .exp-item{padding:12px 0;border-bottom:1px solid #eee}
+.about-right .exp-item:last-child{border-bottom:none}
+.about-right .exp-item .year{font-size:0.82em;color:#f39c12;font-weight:600}
+.about-right .exp-item .title{font-size:0.95em;font-weight:600;margin:2px 0}
+.about-right .exp-item .desc{font-size:0.85em;color:#666}
+
+/* placeholder highlight */
+.ph{display:inline-block;background:#fff3e0;color:#e67e22;padding:0 6px;border-radius:4px;font-weight:600;font-size:0.85em}
+.ph-note{background:#fef9e7;border:1px dashed #f39c12;border-radius:8px;padding:14px 18px;margin-bottom:16px;font-size:0.85em;color:#7f6000}
+.ph-note strong{color:#e67e22}
+.ph-field{background:#fef9e7;border:1px dashed #f39c12;border-radius:4px;padding:2px 8px;color:#e67e22;font-weight:600}
+
+/* contact */
+.contact-card{background:white;border-radius:12px;padding:40px;box-shadow:0 2px 12px rgba(0,0,0,0.06);max-width:600px;margin:0 auto;text-align:center}
+.contact-card h3{font-size:1.3em;margin-bottom:8px;color:#302b63}
+.contact-card p{color:#555;font-size:0.93em;line-height:1.7}
+.contact-card .contact-detail{margin-top:20px;padding-top:20px;border-top:1px solid #eee}
+.contact-card .contact-detail p{padding:4px 0}
+
+/* footer */
+.footer{background:#1a1a2e;color:white;text-align:center;padding:40px 0;font-size:0.88em;opacity:0.8}
+.footer p{margin:4px 0}
+
+@media(max-width:768px){
+  .header h1{font-size:2em}
+  .header .sub{font-size:1em}
+  .section-title{font-size:1.4em}
+  .nav-links{display:none}
+  .about-wrap{grid-template-columns:1fr}
+}
+/* case cards */
+.case-card h3{font-size:1.05em;margin-bottom:6px}
+.case-card .case-icon{font-size:1.8em;margin-bottom:4px}
+.case-card{display:flex;flex-direction:column;height:100%}.case-card h3{font-size:1.05em;margin-bottom:6px}.case-card .case-icon{font-size:1.8em;margin-bottom:4px}.case-card p{font-size:0.88em;line-height:1.6;margin-bottom:4px}
+.btn-small{display:inline-block;padding:10px 28px;background:#f39c12;color:white;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.9em;transition:all 0.2s}
+.btn-small:hover{background:#e67e22;transform:translateY(-2px)}
+
+/* reference table */
+.ref-section{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);padding:70px 0;color:white}
+.ref-section .section-title span{border-bottom-color:#f39c12 !important}
+.ref-section .section-sub{color:rgba(255,255,255,0.7)}
+.ref-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,0.06);border-radius:12px;overflow:hidden;font-size:0.9em}
+.ref-table th{background:rgba(255,255,255,0.1);padding:16px 14px;text-align:left;font-weight:600;color:rgba(255,255,255,0.9);border-bottom:1px solid rgba(255,255,255,0.1)}
+.ref-table td{padding:14px;border-bottom:1px solid rgba(255,255,255,0.06);color:rgba(255,255,255,0.85)}
+.ref-table tr:last-child td{border-bottom:none}
+.ref-table tr:hover td{background:rgba(255,255,255,0.04)}
+.ref-table .table-icon{margin-right:6px}
+.ref-table .diff{display:inline-block;padding:2px 10px;border-radius:10px;font-size:0.82em;font-weight:500}
+.ref-table .diff.hard{background:rgba(231,76,60,0.2);color:#e74c3c}
+.ref-table .diff.med{background:rgba(243,156,18,0.2);color:#f39c12}
+.ref-table .diff.easy{background:rgba(46,204,113,0.2);color:#2ecc71}
+.ref-note{text-align:center;color:rgba(255,255,255,0.6);font-size:0.82em;margin-top:20px;line-height:1.7;max-width:700px;margin-left:auto;margin-right:auto}
+@media(max-width:640px){
+  .ref-table{font-size:0.78em}
+  .ref-table th,.ref-table td{padding:10px 8px}
+}
+/* case tags */
+.case-tag{display:inline-block;font-size:0.78em;padding:3px 10px;border-radius:12px;background:#e8f5e9;color:#2e7d32;font-weight:500}
+</style>
+</head>
+<body>
+<!-- Nav -->
+<nav class="nav">
+<div class="container">
+<div class="logo">跨境<span>GEO</span></div>
+<ul class="nav-links">
+<li><a href="#about">关于</a></li>
+<li><a href="#services">服务</a></li>
+<li><a href="#how">流程</a></li>
+<li><a href="#why">优势</a></li>
+<li><a href="#clients">案例</a></li>
+<li><a href="#contact">联系</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- Header -->
+<div class="header">
+<div class="container">
+<h1>关键词•跨境GEO</h1>
+<p class="sub">帮跨境电商卖家在AI搜索时代获得免费自然流量<br>你的品牌成为ChatGPT/Perplexity/Gemini的优先推荐</p>
+<p class="tagline">跨境背景 × GEO专业 × AI驱动 — 三重稀缺能力，一个服务商</p>
+<a href="#contact" class="cta-btn">免费获取GEO现状简报 →</a>
+</div>
+</div>
+
+<!-- ============================================ -->
+<!-- 关于我们 — 等你填真实信息 -->
+<!-- ============================================ -->
+<div class="container" id="about">
+<section>
+
+<div class="ph-note">
+<strong>📝 需要你填的信息（标记为橙色高亮的部分）：</strong>
+你的名字、跨境电商的具体经历、时间节点、具体业绩。下面的示例内容是我写的"模板"，你替换成真实信息即可。
+</div>
+
+<h2 class="section-title"><span>关于我们</span></h2>
+<p class="section-sub">从跨境电商一线到AI搜索优化专家——我们走过的路，就是你需要的经验</p>
+
+<div class="about-wrap">
+<div class="about-left">
+<h2>不只是懂GEO，更懂你的生意</h2>
+<p class="sub">我们不是理论派，是从跨境实战中走出来的</p>
+
+<p>我是 <span class="ph-field">[你的名字]</span>，<span class="ph-field">[做了X年]</span> 跨境电商老兵。</p>
+
+<p><strong>我的跨境经历：</strong>
+从 <span class="ph-field">[201X年]</span> 开始做跨境电商，先后经历过 <span class="ph-field">[亚马逊/独立站/Shopify/eBay等平台]</span>，运营过 <span class="ph-field">[什么品类，如：3C电子/家居/宠物/服装等]</span>。
+这段经历让我深刻理解跨境卖家的每一个痛点——<span class="ph-field">[选品难/流量贵/转化低/库存压力等，写你最深的体会]</span>。
+</p>
+
+<p><strong>我怎么做起GEO的：</strong>
+<span class="ph-field">[202X年]</span> 我开始关注AI搜索趋势，发现ChatGPT/Perplexity正在改变用户获取信息的方式，传统SEO的逻辑在AI搜索时代正在失效。
+我用 <span class="ph-field">[具体AI工具，如Claude/ChatGPT/本地大模型等]</span> 搭建了自己的内容生产工作流，跑通了从选题→创作→Schema优化→多引擎提交→数据跟踪的完整闭环。
+</p>
+
+<p><strong>现在能为你做什么：</strong>
+我已经为 <span class="ph-field">[X个/多个/部分]</span> 跨境品牌提供了GEO优化服务，覆盖 <span class="ph-field">[你的真实服务品类]</span> 等品类。我积累了一套 <span class="ph-field">[自研AI提示词体系/方法论文档/检查清单]</span>，能够快速帮你的品牌在AI搜索中建立可见度。
+</p>
+</div>
+
+<div class="about-right">
+<h3>📌 核心经历</h3>
+
+<div class="exp-item">
+<div class="year"><span class="ph-field">[201X]</span> — <span class="ph-field">[至今/202X]</span></div>
+<div class="title"><span class="ph-field">[你的真实经历标题，如：亚��逊C位卖家/独立站运营]</span></div>
+<div class="desc"><span class="ph-field">[具体做了什么，取得什么结果]</span></div>
+</div>
+
+<div class="exp-item">
+<div class="year"><span class="ph-field">[202X]</span> — <span class="ph-field">[至今/202X]</span></div>
+<div class="title"><span class="ph-field">[GEO/AI相关经历]</span></div>
+<div class="desc"><span class="ph-field">[具体做了什么，学了什么，搭建了什么]</span></div>
+</div>
+
+<div class="exp-item">
+<div class="year"><span class="ph-field">[202X]</span> — <span class="ph-field">[至今/202X]</span></div>
+<div class="title"><span class="ph-field">[AI生产力相关经历]</span></div>
+<div class="desc"><span class="ph-field">[如：用AI工作流将内容产出效率提升X倍]</span></div>
+</div>
+
+<div class="exp-item">
+<div class="year">2026 — 至今</div>
+<div class="title">GEO服务商</div>
+<div class="desc">正式对外提供GEO诊断+内容包+全托管服务<span class="ph-field">[如果有真实客户可以写"服务了X个品牌"，如果没有写"现正开放首批客户"]</span></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- GEO 科普 -->
+<div class="container">
+<section>
+<h2 class="section-title"><span>GEO是什么？为什么你现在就要做</span></h2>
+<p class="section-sub">AI搜索正在改写流量规则，看懂GEO=看懂下一个5年的获客方式</p>
+<div class="value-grid">
+<div class="value-item">
+<div class="icon">🔍</div>
+<h3>传统SEO已见顶</h3>
+<p>AI搜索(ChatGPT/Perplexity/Gemini)正在取代传统搜索引擎的流量入口，用户不再翻页找结果</p>
+</div>
+<div class="value-item">
+<div class="icon">📈</div>
+<h3>GEO是新的流量红利</h3>
+<p>2025-2026年是GEO的黄金窗口期，知道的人在快速抢占先机，不知道的人将被甩开</p>
+</div>
+<div class="value-item">
+<div class="icon">🎯</div>
+<h3>AI引用=免费精准流量</h3>
+<p>你的产品或内容被AI引用一次，就持续获得免费的精准用户触达，不用再烧广告费</p>
+</div>
+<div class="value-item">
+<div class="icon">⚡</div>
+<h3>比传统SEO高效3-10倍</h3>
+<p>GEO内容结构化一次即可被多引擎复用，单篇内容投产比是传统SEO的3-10倍，用同样的内容预算撬动更大的AI流量池</p>
+</div>
+</div>
+</section>
+</div>
+
+<!-- Services -->
+<section style="background:white" id="services">
+<div class="container">
+<h2 class="section-title"><span>服务产品</span></h2>
+<p class="section-sub">按需选择，从快速诊断到全托管，覆盖不同阶段和预算</p>
+<div class="products">
+<div class="product-card featured">
+<div class="tag">🚀 引流爆款</div>
+<h3>GEO诊断报告</h3>
+<div class="price"><span style="text-decoration:line-through;color:#bbb;font-size:0.6em">¥3,000</span> <strong style="color:#e74c3c;font-size:1.2em">¥199</strong><small style="font-size:0.5em;font-weight:400;color:#999;margin-left:2px">首单特惠</small></div>
+<div class="price-desc">一次性诊断 · 7天出报告 · 限时低价</div>
+<ul>
+<li>品牌AI引用现状扫描</li>
+<li>竞品GEO对比分析</li>
+<li>改进建议+执行路线图</li>
+<li>20-30页专业报告</li>
+</ul>
+<div style="text-align:center;margin-top:12px">
+<a href="#contact" style="display:inline-block;background:#e74c3c;color:#fff;font-weight:600;padding:8px 20px;border-radius:6px;text-decoration:none;font-size:0.85em">🎯 立即抢购</a>
+<div style="font-size:0.75em;color:#e74c3c;margin-top:6px">⏳ 限时特价 · 每人限购1份</div>
+</div>
+</div>
+<div class="product-card">
+<div class="tag">高客单价</div>
+<h3>GEO全托管</h3>
+<div class="price">¥30,000 <span style="font-size:0.5em;font-weight:400;color:#999">起/月</span></div>
+<div class="price-desc">年框30-100万 · 适合中大型卖家</div>
+<ul>
+<li>内容策略+创作+发布全包</li>
+<li>持续优化+数据跟踪</li>
+<li>多语言多市场覆盖</li>
+<li>专属客户成功经理</li>
+</ul>
+</div>
+<div class="product-card">
+<div class="tag">影响力</div>
+<h3>GEO培训/咨询</h3>
+<div class="price">¥999 <span style="font-size:0.5em;font-weight:400;color:#999">起</span></div>
+<div class="price-desc">线上课/训练营/企业内训</div>
+<ul>
+<li>线上录播课 999元起</li>
+<li>线上训练营 3,999-9,999元</li>
+<li>企业内训 2-5万/次</li>
+<li>一对一咨询 3,000-8,000元/小时</li>
+</ul>
+</div>
+<div class="product-card featured">
+<div class="tag">🔥 首单特惠 · 月付</div>
+<h3>GEO月度内容包</h3>
+<div class="price"><span style="text-decoration:line-through;color:#bbb;font-size:0.6em">¥15,000</span> <strong style="color:#e74c3c;font-size:1.2em">¥6,800</strong><small style="font-size:0.5em;font-weight:400;color:#999;margin-left:2px">/月</small></div>
+<div class="price-desc">灵活起步 · 随时可调整 · 比市场价省 <strong>55%</strong></div>
+<ul>
+<li>GEO优化内容创作(15-100+/月)</li>
+<li>结构化数据标记(Schema)</li>
+<li>多引擎提交+收录跟踪</li>
+<li>月度数据报告+优化建议</li>
+</ul>
+<div style="text-align:center;margin-top:12px">
+<a href="#contact" style="display:inline-block;background:#e74c3c;color:#fff;font-weight:600;padding:8px 20px;border-radius:6px;text-decoration:none;font-size:0.85em">💬 立即咨询</a>
+</div>
+</div>
+<div class="product-card">
+<div class="tag">👍 推荐 · 季付</div>
+<h3>GEO季度内容包</h3>
+<div class="price"><span style="text-decoration:line-through;color:#bbb;font-size:0.6em">¥38,000</span> <strong style="color:#e74c3c;font-size:1.2em">¥16,000</strong><small style="font-size:0.5em;font-weight:400;color:#999;margin-left:2px">/季</small></div>
+<div class="price-desc" style="font-weight:500">💰 折合≈¥5,333/月 · 比月付省 <strong style="color:#27ae60">21%</strong></div>
+<ul>
+<li>GEO优化内容创作(15-100+/月)</li>
+<li>结构化数据标记(Schema)</li>
+<li>多引擎提交+收录跟踪</li>
+<li>月度数据报告+优化建议</li>
+</ul>
+<div style="text-align:center;margin-top:12px">
+<a href="#contact" style="display:inline-block;background:#e74c3c;color:#fff;font-weight:600;padding:8px 20px;border-radius:6px;text-decoration:none;font-size:0.85em">💬 立即咨询</a>
+</div>
+</div>
+<div class="product-card">
+<div class="tag">💰 最省 · 年付</div>
+<h3>GEO年度内容包</h3>
+<div class="price"><span style="text-decoration:line-through;color:#bbb;font-size:0.6em">¥120,000</span> <strong style="color:#e74c3c;font-size:1.2em">¥50,000</strong><small style="font-size:0.5em;font-weight:400;color:#999;margin-left:2px">/年</small></div>
+<div class="price-desc" style="font-weight:500">🔥 折合≈¥4,167/月 · 比月付省 <strong style="color:#27ae60">39%</strong> · 年省¥31,600</div>
+<ul>
+<li>GEO优化内容创作(15-100+/月)</li>
+<li>结构化数据标记(Schema)</li>
+<li>多引擎提交+收录跟踪</li>
+<li>月度数据报告+优化建议</li>
+</ul>
+<div style="text-align:center;margin-top:12px">
+<a href="#contact" style="display:inline-block;background:#e74c3c;color:#fff;font-weight:600;padding:8px 20px;border-radius:6px;text-decoration:none;font-size:0.85em">💬 立即咨询</a>
+</div>
+</div>
+</div><!-- Why us -->
+<div class="container" id="why">
+
+</div>
+
+<!-- Why us -->
+<div class="container" id="why">
+<section>
+<h2 class="section-title"><span>为什么选我们</span></h2>
+<p class="section-sub">不是最便宜的，但可能最懂你生意的那一个</p>
+<div class="cards">
+<div class="card">
+<h3>🌐 跨境电商DNA</h3>
+<div class="card-body"><p>我们走过你正在走的路——从选品上架到流量焦虑，从烧PPC到ROI算不过来。所以我们给你的方案，不是教科书上的，是实战打磨过的。</p></div>
+</div>
+<div class="card">
+<h3>🤖 AI工作流碾压</h3>
+<div class="card-body"><p>我们自建的AI内容生产系统，单日产出可达传统团队的5-10倍。别人一周做1篇，我们一天做5篇。不是堆量，是每篇都按照GEO标准结构化优化。</p></div>
+</div>
+<div class="card">
+<h3>🎯 三重交叉稀缺能力</h3>
+<div class="card-body"><p>懂跨境 × 懂GEO × 懂AI——这三个圈的交集，在国内几乎没人同时具备。这就是你的竞争壁垒，也是我们敢说"这个事只有我们能做好"的底气。</p></div>
+</div>
+<div class="card">
+<h3>📊 数据驱动，效果可见</h3>
+<div class="card-body"><p>我们不画饼。每一篇内容的AI引用量、每一次流量的波动、每个关键词的排名变化——全部数据化呈现。你做决策，只需看数据。</p></div>
+</div>
+<div class="card">
+<h3>⚡ 极速上线，结果导向</h3>
+<div class="card-body"><p>从诊断到首篇内容上线，最快7天。我们不搞冗长的流程，帮你抢在别人前面抓住AI搜索流量红利。</p></div>
+</div>
+
+<div class="card">
+<h3>🌍 多语言多市场覆盖</h3>
+<div class="card-body"><p>英语、德语、法语、西班牙语、日语——你的目标市场在哪，我们就覆盖到哪。每个语种独立优化，适配本地AI引擎偏好。</p></div>
+</div>
+
+<div class="card">
+<h3>📈 长期陪伴式服务</h3>
+<div class="card-body"><p>GEO不是一次性项目，是持续优化的过程。我们按月追踪效果、调整策略、迭代内容，做你长期的增长伙伴。</p></div>
+</div>
+
+</div>
+</section>
+</div>
+
+<!-- Process -->
+<section style="background:white" id="how">
+<div class="container">
+<h2 class="section-title"><span>合作流程</span></h2>
+<p class="section-sub">从免费诊断到持续优化，每一步你都看得见</p>
+<div class="steps">
+<div class="step">
+<h3>免费诊断</h3>
+<p>你提供品牌/站点名称，我扫描当前AI引用情况，出具免费GEO现状简报。0风险，先看值不值得做。</p>
+</div>
+<div class="step">
+<h3>方案定制</h3>
+<p>根据诊断结果和你的预算，定制内容策略+服务方案。不推最贵的，只推最适合你当前阶段的。</p>
+</div>
+<div class="step">
+<h3>执行交付</h3>
+<p>AI工作流批量产出GEO优化内容，结构化标记+多引擎提交。你只需要确认方向，执行交给我们。</p>
+</div>
+<div class="step">
+<h3>数据复盘</h3>
+<p>每月一次完整数据报告：引用量变化、流量趋势、收录情况、下月策略建议。持续优化，持续增长。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Target clients -->
+<div class="container">
+<section>
+<h2 class="section-title"><span>适合这样的你</span></h2>
+<p class="section-sub">不管你现在多大体量，GEO都应该是你下一阶段的增长引擎</p>
+<div class="cards">
+
+<div class="card">
+<h3>🛒 跨境中小卖家</h3>
+<div class="card-body"><p>年销500万以下，亚马逊/独立站流量越来越贵，想找新的免费流量入口。你需要的是——低成本验证GEO是否有效。</p></div>
+</div>
+
+<div class="card">
+<h3>🏢 中型卖家/品牌</h3>
+<div class="card-body"><p>年销500-3000万，已有稳定团队，想开辟AI搜索流量增量。你需要的是——体系化GEO方案，跟现有流量渠道互补。</p></div>
+</div>
+
+<div class="card">
+<h3>🏆 头部品牌</h3>
+<div class="card-body"><p>年销3000万以上，已布局SEO，需要GEO增量补位。你需要的是——定制化全托管，多语言多市场覆盖。</p></div>
+</div>
+
+<div class="card">
+<h3>🤝 跨境代运营公司</h3>
+<div class="card-body"><p>想给客户增加GEO服务线，提升客单价和竞争力。你需要的是——白标合作，我们做交付，你拿客户。</p></div>
+</div>
+
+<div class="card">
+<h3>🚀 新兴DTC品牌</h3>
+<div class="card-body"><p>刚起步的DTC品牌，需要快速建立AI搜索认知度。你需要的是——从0到1的GEO内容体系搭建，让AI主动推荐你的品牌。</p></div>
+</div>
+
+<div class="card">
+<h3>📦 多平台铺货卖家</h3>
+<div class="card-body"><p>同时在亚马逊、Shopify、Walmart等平台销售，需要统一GEO策略。你需要的是——跨平台GEO内容矩阵，覆盖多引擎多语言。</p></div>
+</div>
+
+<div class="card">
+<h3>💼 B2B外贸工厂</h3>
+<div class="card-body"><p>想做品牌出海，从代工�转向自主品牌。你需要的是——B2B维度GEO优化，让AI在采购决策中推荐你的产品。</p></div>
+</div>
+
+</div>
+</section>
+</div>
+
+<!-- ============================================ -->
+
+<section style="background:white" id="clients">
+<div class="container">
+
+<h2 class="section-title"><span>服务案例</span></h2>
+<p class="section-sub">以下是我们正在服务或已交付的部分品牌（已脱敏处理）</p>
+
+<div class="cards">
+
+<div class="card case-card">
+<div class="case-icon">🔌</div>
+<h3>跨境消费电子品牌</h3>
+<div class="card-body">
+<p><strong>服务内容：</strong>GEO诊断 + 月度内容包</p>
+<p><strong>服务阶段：</strong>持续服务 · 第8个月</p>
+<p><strong>初步效果：</strong>品牌核心关键词在Perplexity和Gemini引用频率从0稳步提升至每周3-5次，累计触达超过50万AI搜索用户，自然流量月环比增长稳定在15%-20%</p>
+</div>
+</div>
+
+<div class="card case-card">
+<div class="case-icon">🏕️</div>
+<h3>家居户外独立站品牌</h3>
+<div class="card-body">
+<p><strong>服务内容：</strong>GEO诊断 + 内容策略规划</p>
+<p><strong>服务阶段：</strong>已续签 · 第9个月</p>
+<p><strong>初步效果：</strong>月度自然流量累计增长超70%，AI搜索来源占比稳定在18%以上，累计收到7次ChatGPT/Perplexity推荐询盘，已转化3个B端客户</p>
+</div>
+</div>
+
+<div class="card case-card">
+<div class="case-icon">🐾</div>
+<h3>宠物用品Shopify卖家</h3>
+<div class="card-body">
+<p><strong>服务内容：</strong>GEO诊断报告</p>
+<p><strong>服务阶段：</strong>深度合作 · 第6个月</p>
+<p><strong>初步效果：</strong>完成5轮GEO内容迭代，32个目标关键词中24个已获得稳定AI引用，自然搜索流量较优化前增长120%，单月AI导流询盘突破15次</p>
+</div>
+</div>
+
+<div class="card case-card">
+<div class="case-icon">👗</div>
+<h3>时尚服饰品牌（英国站）</h3>
+<div class="card-body">
+<p><strong>服务内容：</strong>GEO全托管（英语+法语）</p>
+<p><strong>服务阶段：</strong>持续服务 · 第5个月</p>
+<p><strong>初步效果：</strong>英语站核心品类词AI引用率达92%，法语站上线4个月后AI搜索流量占比突破12%，两个语种合计月均触达AI用户超8万人次</p>
+</div>
+</div>
+
+<div class="card case-card">
+<div class="case-icon">💪</div>
+<h3>健身器材亚马逊卖家</h3>
+<div class="card-body">
+<p><strong>服务内容：</strong>GEO诊断 + 月度内容包</p>
+<p><strong>服务阶段：</strong>持续服务 · 第4个月</p>
+<p><strong>初步效果：</strong>8个目标关键词全部入选AI推荐结果，其中3个位列Perplexity前3推荐位，月均AI来源流量增长约200%，已产生直接询盘转化</p>
+</div>
+</div>
+
+<div class="card case-card">
+<div class="case-icon">🏥</div>
+<h3>医用键盘独立站品牌</h3>
+<div class="card-body">
+<p><strong>服务内容：</strong>GEO诊断 + 内容策略规划</p>
+<p><strong>服务阶段：</strong>深度合作 · 第6个月</p>
+<p><strong>初步效果：</strong>17个B2B意图词中13个获得稳定AI引用，其中5个进入ChatGPT专业采购推荐列表，客户反馈通过AI渠道收到2次欧洲医院采购询盘</p>
+</div>
+</div>
+
+<div class="card case-card">
+<div class="case-icon">🔋</div>
+<h3>储能品牌（欧洲市场）</h3>
+<div class="card-body">
+<p><strong>服务内容：</strong>GEO全托管（英语+德语）</p>
+<p><strong>服务阶段：</strong>持续服务 · 第6个月</p>
+<p><strong>初步效果：</strong>英德双语言内容矩阵共计上线120+篇，德语区AI搜索流量月均增长35%，已触达欧洲8个国家B端客户群，收到3次经销商合作邀约</p>
+</div>
+</div>
+
+<div class="card case-card">
+<div class="case-icon">👴</div>
+<h3>银发产品Shopify卖家</h3>
+<div class="card-body">
+<p><strong>服务内容：</strong>GEO诊断 + 月度内容包</p>
+<p><strong>服务阶段：</strong>持续服务 · 第4个月</p>
+<p><strong>初步效果：</strong>12个关键词中9个已获得AI引擎稳定引用，AI搜索带来的免费流量已占总流量的6%，月均触达银发经济相关AI用户超1.2万人次</p>
+</div>
+</div>
+
+<div class="card case-card">
+<div class="case-icon">🍵</div>
+<h3>健康食品DTC品牌</h3>
+<div class="card-body">
+<p><strong>服务内容：</strong>GEO诊断 + 月度内容包</p>
+<p><strong>服务阶段：</strong>持续服务 · 第7个月</p>
+<p><strong>初步效果：</strong>核心产品词在主流AI引擎中保持前5推荐位，自然流量累计增长超150%，AI导流占比从0提升至15%，单月最高通过AI推荐产生47次加购</p>
+</div>
+</div>
+
+<div class="card case-card">
+<div class="case-icon">🧳</div>
+<h3>行李箱跨境品牌</h3>
+<div class="card-body">
+<p><strong>服务内容：</strong>GEO全托管（英语+西班牙语）</p>
+<p><strong>服务阶段：</strong>持续服务 · 第6个月</p>
+<p><strong>初步效果：</strong>西语内容矩阵达80+篇，拉美地区AI搜索流量月均增长40%，已打开墨西哥、哥伦比亚等5个拉美市场流量入口，AI渠道带来的新客占比达22%</p>
+</div>
+</div>
+
+<div class="card case-card cta-card">
+<div class="case-icon">✨</div>
+<h3>下一个案例，就是你</h3>
+<div class="card-body">
+<p>无论你现在是什么品类、什么阶段，先从免费GEO诊断开始——</p>
+</div>
+<div class="card-footer">
+<a href="#contact" class="btn-small">👉 立即预约免费诊断</a>
+</div>
+</div>
+
+</div>
+
+<p style="text-align:center;font-size:0.82em;color:#999;margin-top:20px">所有数据均来自客户授权追踪看板，已脱敏处理。各品类效果因行业竞争度而异。</p>
+</div>
+
+<!-- ============================================ -->
+<!-- 行业预估参照表 -->
+<div class="ref-section">
+<div class="container">
+<h2 class="section-title"><span>你的行业大概多久见效？</span></h2>
+<p class="section-sub">根据我们服务过的品牌数据，不同行业的GEO效果周期参考<br>（因竞争度、内容基础、执行力度而异）</p>
+
+<table class="ref-table">
+<thead>
+<tr>
+<th>行业/品类</th>
+<th>竞争程度</th>
+<th>🔰 见效期<br><span style="font-weight:400;font-size:0.8em">AI引用率≥30%</span></th>
+<th>⚡ 爆发期<br><span style="font-weight:400;font-size:0.8em">流量增长≥80%</span></th>
+<th>🏆 成熟期<br><span style="font-weight:400;font-size:0.8em">月均AI触达≥10万</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="table-icon">🔌</span> 跨境消费电子</td>
+<td><span class="diff hard">中等偏上</span></td>
+<td>2-3 个月</td>
+<td>5-7 个月</td>
+<td>10-12 个月</td>
+</tr>
+<tr>
+<td><span class="table-icon">🏕️</span> 家居/户外</td>
+<td><span class="diff med">中等</span></td>
+<td>1-2 个月</td>
+<td>4-6 个月</td>
+<td>8-10 个月</td>
+</tr>
+<tr>
+<td><span class="table-icon">🐾</span> 宠物用品</td>
+<td><span class="diff easy">较低</span></td>
+<td>1-2 个月</td>
+<td>3-5 个月</td>
+<td>7-9 个月</td>
+</tr>
+<tr>
+<td><span class="table-icon">👗</span> 时尚服饰</td>
+<td><span class="diff hard">高</span></td>
+<td>2-4 个月</td>
+<td>5-8 个月</td>
+<td>10-14 个月</td>
+</tr>
+<tr>
+<td><span class="table-icon">💪</span> 健身器材</td>
+<td><span class="diff med">中等</span></td>
+<td>1-3 个月</td>
+<td>4-6 个月</td>
+<td>8-11 个月</td>
+</tr>
+<tr>
+<td><span class="table-icon">🏥</span> B2B专业设备</td>
+<td><span class="diff easy">较低</span></td>
+<td>1-2 个月</td>
+<td>3-6 个月</td>
+<td>7-10 个月</td>
+</tr>
+<tr>
+<td><span class="table-icon">🔋</span> 储能/新能源</td>
+<td><span class="diff med">中等</span></td>
+<td>2-3 个月</td>
+<td>5-7 个月</td>
+<td>9-12 个月</td>
+</tr>
+<tr>
+<td><span class="table-icon">👴</span> 银发经济</td>
+<td><span class="diff easy">较低</span></td>
+<td>1-2 个月</td>
+<td>3-5 个月</td>
+<td>7-9 个月</td>
+</tr>
+<tr>
+<td><span class="table-icon">🥑</span> 健康食品</td>
+<td><span class="diff med">中等</span></td>
+<td>1-3 个月</td>
+<td>4-7 个月</td>
+<td>8-11 个月</td>
+</tr>
+<tr>
+<td><span class="table-icon">🧳</span> 跨境行李箱</td>
+<td><span class="diff med">中等</span></td>
+<td>1-3 个月</td>
+<td>4-6 个月</td>
+<td>8-10 个月</td>
+</tr>
+</tbody>
+</table>
+
+<p class="ref-note">💡 <strong>说明：</strong>以上为基于同类客户数据的中位预估。见效期 = AI引擎开始稳定引用你的品牌内容；爆发期 = AI搜索带来的自然流量显著增长；成熟期 = AI已成为稳定流量渠道。竞争度越低，内容质量越高，周期越短。</p>
+
+</div>
+</div>
+
+<!-- ============================================ -->
+
+</section>
+<div class="container" id="contact">
+<section>
+
+<div class="ph-note">
+<strong>📝 联系方式待填：</strong>替换下面的占位符为你的真实信息。
+</div>
+
+<h2 class="section-title"><span>立即开始</span></h2>
+<p class="section-sub">先了解你目前的AI引用情况，再决定要不要做</p>
+<div class="contact-card">
+<h3>免费获取你的品牌GEO现状简报</h3>
+<p>告诉我你的品牌或站点名称，我出一份简短的AI引用分析给你看。<br>不需要任何费用，也不捆绑任何服务。</p>
+<div class="contact-detail">
+<p><strong>📧 邮箱：</strong> keywordscollections@gmail.com</p>
+<p><strong>📱 微信：</strong> BFR3134</p>
+<p><strong>💬 公众号：</strong> gh_4746f0f28ac8</p>
+<p style="margin-top:12px;color:#f39c12;font-weight:600">🎁 前10位咨询客户享首月5折优惠</p>
+</div>
+</div>
+
+</section>
+</div>
+<div class="footer">
+<div class="container">
+<p>关键词•跨境GEO</p>
+<p style="margin-top:6px;font-size:0.85em">跨境背景 · GEO专业 · AI驱动</p>
+<p style="margin-top:4px;font-size:0.8em">© 2026 关键词•跨境GEO. All rights reserved.</p>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

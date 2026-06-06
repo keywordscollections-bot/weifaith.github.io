@@ -1,0 +1,148 @@
+﻿============================================================
+  关键词·跨境GEO - 网站项目完整工作简报
+  生成时间: 2026-06-06 12:06
+============================================================
+
+【一、项目身份】
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  网站名称：关键词·跨境GEO
+  核心定位：跨境电商AI搜索优化(GEO)服务商
+  目标客户：跨境电商卖家（B2C/B2B）
+  服务产品：
+    - GEO诊断报告     ￥199
+    - GEO月度内容包   ￥6,800/月
+    - GEO全托管       ￥30,000/月
+    - GEO培训咨询（未定价）
+  站点URL：https://keywordscollections-bot.github.io/weifaith.github.io/
+  联系方式：1099676975@qq.com
+
+【二、网站资产盘点（共22页）】
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [OK] 首页（index.html）           50KB
+  [OK] 案例列表（cases.html）       11KB
+  [OK] 案例详情 x 6个（cases/）     各7KB
+        消费电子 / 家居户外 / 宠物用品 / 时尚服饰 / 健身器材 / B2B专业设备
+        每个页面包含：客户背景/挑战/方案/效果/CTA
+        cases.html 卡片已全部链接到详情页
+  [OK] 知识库首页（blog/index.html） 12KB
+  [OK] 知识库文章 x 7篇（blog/）
+        geo-intro.html（GEO入门指南）
+        geo-vs-seo.html（GEO vs SEO对比）
+        geo-crossborder-intro.html（跨境GEO入门）
+        geo-2026.html（2026趋势）
+        geo-2026-trends-v2.html（2026趋势完善版）
+        amazon-sellers-ai-search.html（亚马逊卖家AI搜索）
+        wechat-geo-article-1.html / zhihu-geo-answer-1.html / moments-geo-3days.html
+  [OK] GEO百科（glossary.html）     19KB - 含60+术语解释
+  [OK] 关于页（about.html）          9KB
+  [OK] 404页 / sitemap.xml / robots.txt
+
+【三、GEO获客总表126项进度】
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  总计 126项
+  > 已完成 26项（20.6%）
+  > 部分完成 24项（19%）
+  > 未开始 76项（60.4%）
+
+  分项进度：
+  一、社交媒体内容营销（18项）  完成0  部分5   未开始13
+  二、SEO优化（17项）           完成6  部分4   未开始7
+  三、AI/GEO搜索优化（20项）    完成12 部分4   未开始4    <- 最成熟区块
+  四、内容资产建设（17项）      完成5  部分4   未开始8
+  五、付费推广（18项）          完成0  部分0   未开始18   <- 完全空白
+  六、合作与联盟推广（14项）    完成0  部分1   未开始13
+  七、数据分析与监控（16项）    完成0  部分5   未开始11
+  八、技术基建（6项）           完成3  部分1   未开始2
+
+  详细126项清单文件：GEO获客总表_完整版.txt / GEO获客总表_126项.txt
+
+【四、下一步可执行方向】
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  * 优先级A - 社交媒体内容营销���回填126项的第一类）
+    - 把7篇blog文章改写成小红书笔记
+    - 改写成微信公众号排版
+    - 改写成知乎回答
+    - 改写成朋友圈文案
+    - 创建社交媒体内容日历
+
+  * 优先级B - 付费推广（回填第五类，完全空白）
+    - 设计Google Ads GEO搜索广告文案
+    - 设计着陆页优化方案
+    - 设置广告追踪
+
+  * 优先级C - 邮件自动化
+    - Mailchimp接入首页订阅表单
+    - 写欢迎邮件序列（3-5封）
+    - 设置自动跟进流程
+
+  * 优先级D - 数据分析（回填第七类）
+    - 全网站注入GA4代码
+    - 部署Clarity热力图
+
+  * 优先级E - 更多内容页面
+    - FAQ常见问题页
+    - 服务详情页（收窄4项服务分别介绍）
+    - 资源导航页
+
+【五、技术信息】
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  工作目录：E:\五年计划\site
+  部署方式：GitHub Pages
+    - repo: keywordscollections-bot/weifaith.github.io
+    - branch: gh-pages（静态文件）
+    - 源分支：main（开发）
+  构建方式：纯静态HTML（无框架）
+  样式架构：单文件内联CSS（非框架）
+  数据文件：
+    - GEO获客总表_完整版.txt（126项完整清单）
+    - GEO获客总表_126项.txt
+    - GEO获客总表_98项.txt
+    - target_urls.txt
+    - article_content.txt
+
+【六、文件清单】
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  /index.html                      首页
+  /cases.html                      案例列表
+  /cases/case-consumer-electronics.html  案例-消费电子
+  /cases/case-home-outdoor.html     案例-家居户外
+  /cases/case-pet-supplies.html     案例-宠物用品
+  /cases/case-fashion-apparel.html  案例-时尚服饰
+  /cases/case-fitness-equipment.html    案例-健身器材
+  /cases/case-b2b-equipment.html    案例-B2B专业设备
+  /blog/index.html                  知识库首页
+  /blog/geo-intro.html              GEO入门指南
+  /blog/geo-vs-seo.html             GEO vs SEO
+  /blog/geo-crossborder-intro.html  跨境GEO入门
+  /blog/geo-2026.html               2026趋势
+  /blog/geo-2026-trends-v2.html     2026趋势v2
+  /blog/amazon-sellers-ai-search.html   亚马逊卖家AI搜索
+  /blog/wechat-geo-article-1.html   公众号文章
+  /blog/zhihu-geo-answer-1.html     知乎回答
+  /blog/moments-geo-3days.html      朋友圈3天
+  /glossary.html                    GEO百科
+  /about.html                       关于我们
+  /404.html                         404页
+  /competitor.html                  竞品分析
+  /sitemap.xml                      站点地图
+  /robots.txt                       爬虫规则
+  /logo.svg                         网站Logo
+  /qr_base64.txt                    QR码base64
+
+【七、常用操作命令】
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  本地预览：
+    cd E:\五年计划\site && python -m http.server 8000
+
+  部署到GitHub Pages：
+    cd E:\五年计划\site
+    git add .
+    git commit -m '更新说明'
+    git push origin main
+
+  查看所有HTML文件：
+    Get-ChildItem *.html, */*.html -Recurse
+
+============================================================
+  本简报可复制到新窗口开头，直接继续工作。
+============================================================
