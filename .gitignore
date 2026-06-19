@@ -1,5 +1,24 @@
-﻿# 备份文件
-index_backup_*.html
-*.py
+﻿# Debug/automation scripts - deployed by mistake
+*.js
+*.bak
+*.md
+*.pyc
+*.txt
+*.jpg
+__pycache__/
+.vercel/
 
-node_modules/
+# OS files
+Thumbs.db
+.DS_Store
+
+# Temp
+tmp_*
+index.html.bak
+index_backup_*
+index.html.tmp
+create-pricing.py
+from_*.html
+
+# Docs folder (not main site)
+docs/
